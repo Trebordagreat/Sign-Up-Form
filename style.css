@@ -8,6 +8,10 @@ html, body {
     background-color: rgb(40, 40, 40)
 }
 
+:root {
+    font-size: 10px;
+}
+
 .content {
     width: 100vw;
     height: 90vh;
@@ -42,18 +46,23 @@ img {
 }
 
 .logo-name {
-    font-size: 60px;
+    font-size: 6rem;
 }
 
 #image-credit {
     position: absolute;
-    left: 6%;
+    color: white;
+    left: 11%;
 }
 
 #logo-credit {
     position: absolute;
-    left: 6%;
+    left: 11%;
     bottom: 0;
+}
+
+a {
+    color: white;
 }
 
 .right-section {
@@ -62,18 +71,61 @@ img {
     flex-direction: column;
 }
 
+.form-summary {
+    padding: 6%;
+    display: flex;
+    flex-direction: column;
+    gap: ;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 fieldset {
     display: flex;
     flex-direction: column;
-    gap: 3%;
+    gap: 3vh;
+    background-color: white;
+    position: relative;
+    padding: 6%;
+    border:none;
+    box-shadow: 0rem 0.3rem 0.5rem rgb(210, 210, 210);
+    margin-bottom: 5vh;
 }
 
 .form-row {
     display: flex;
-    gap: 5%
+    gap: 5%;
+    font-size: 1rem;
 }
 
 .form-item {
     display: flex;
     flex-direction: column;
+}
+
+input {
+    border-radius: 6%;
+    border-color: rgb(220, 220, 220)
+}
+
+#lastname:focus {
+    border-color: blue;    
+}
+
+
+button {
+    margin-left: 6%;
+    font-size: 1.5rem;
+    background-color: rgb(48, 135, 170);
+    color: white;
+}
+
+.right-section p {
+    margin-left: 6%;
+    font-size: 1.5rem;
+}
+
+span {
+    color: rgb(48, 135, 170);
+    font-weight: bold;
 }
