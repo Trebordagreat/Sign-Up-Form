@@ -6,8 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <p>Dog</p>
+    <div class="content">
+        <img src="whaleshark.jpg" alt="Whale Shark">
+        <div class="logo-banner">
+            <img src="shark_fin_icon.svg" alt="Logo" id="logo">
+            <p class="logo-name">Shark</p>
+        </div>
+        <div id="image-credit">
+            <a href="https://unsplash.com/@seefromthesky?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ishan @seefromthesky</a> on <a href="https://unsplash.com/s/photos/sharks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </div>
+        <div id="logo-credit">
+            <a href="https://icon-icons.com/icon/shark-fin/132708">Shark Fin Icon on icon-icons.com</a>
+        </div>
+        <div class="right-section">
+            <div>This is not a real online service! I am just trying to create a form that you would not mind filling out if you wanted to support a great cause like saving the sharks.</div>
+            <div>You <em>know</em> you want to.</div>
+            <form action="" method="post">
+                <fieldset>
+                    <legend>Let's do this!</legend>
+                    <div class="form-row">
+                        <div class="form-item">
+                            <label for="firstname">First Name</label>
+                            <input type="text" id="firstname">
+                        </div>
+                        <div class="form-item">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" id="lastname">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-item">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email">
+                        </div>
+                        <div class="form-item">
+                            <label for="number">PHONE NUMBER</label>
+                            <input type="tel" id="number">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-item">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" id="password">
+                        </div>
+                        <div class="form-item">
+                            <label for="password2">CONFIRM PASSWORD</label>
+                            <input type="password" id="password2">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
