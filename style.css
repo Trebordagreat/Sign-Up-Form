@@ -1,20 +1,22 @@
 html, body {
     padding: 0px;
     margin: 0px;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(40, 40, 40)
+    align-items: center;
+    background-color: rgb(40, 40, 40);
+    height: 100%;
+    width: 100%;
 }
 
 :root {
-    font-size: 10px;
+    font-size: min(10px, 0.7vw);
 }
 
 .content {
-    width: 100vw;
-    height: 90vh;
+    --max-height-var: 100%;
+    max-height: var(--max-height-var);
     background-color: rgb(240, 240, 240);
     position: relative;
     display: flex;
@@ -47,18 +49,21 @@ img {
 
 .logo-name {
     font-size: 6rem;
+    font-family: oxygen;
 }
 
 #image-credit {
     position: absolute;
     color: white;
     left: 11%;
+    font-size: 1rem;
 }
 
 #logo-credit {
     position: absolute;
     left: 11%;
     bottom: 0;
+    font-size: 1rem;
 }
 
 a {
@@ -72,10 +77,11 @@ a {
 }
 
 .form-summary {
-    padding: 6%;
+    margin-top: 15vh;
+    padding-left: 6%;
     display: flex;
     flex-direction: column;
-    gap: ;
+    gap: 3vh;
     font-size: 2rem;
     font-weight: bold;
 }
@@ -86,10 +92,19 @@ fieldset {
     gap: 3vh;
     background-color: white;
     position: relative;
-    padding: 6%;
+    padding: 5vh;
+    padding-top: 10vh;
+    padding-left: 6%;
     border:none;
     box-shadow: 0rem 0.3rem 0.5rem rgb(210, 210, 210);
     margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+legend {
+    position: absolute;
+    top: 15px;
+    font-size: 2rem;
 }
 
 .form-row {
@@ -105,7 +120,10 @@ fieldset {
 
 input {
     border-radius: 6%;
-    border-color: rgb(220, 220, 220)
+    border-color: rgb(220, 220, 220);
+    height: 2rem;
+    width: 16rem;
+    font-size: 1.5rem;
 }
 
 #lastname:focus {
@@ -118,6 +136,8 @@ button {
     font-size: 1.5rem;
     background-color: rgb(48, 135, 170);
     color: white;
+    border-radius: 6%;
+    padding: 1vh 3vh;
 }
 
 .right-section p {
