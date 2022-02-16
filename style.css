@@ -78,6 +78,7 @@ a {
 
 .form-summary {
     margin-top: 15vh;
+    padding-right: 12%;
     padding-left: 6%;
     display: flex;
     flex-direction: column;
@@ -116,14 +117,24 @@ legend {
 .form-item {
     display: flex;
     flex-direction: column;
+    gap: 3px;
 }
 
 input {
     border-radius: 6%;
     border-color: rgb(220, 220, 220);
     height: 2rem;
-    width: 16rem;
+    width: 24rem;
     font-size: 1.5rem;
+}
+
+.error:invalid {
+    border-color: red;
+}
+
+span.error-message {
+    color: red;
+    font-size: 1rem;
 }
 
 #lastname:focus {

@@ -25,7 +25,7 @@
         </div>
         <div class="right-section">
             <div class="form-summary">
-                <div>This is not a real online service! I am just trying to create a form that you would not mind filling out if you wanted to support a great cause like saving the sharks.</div>
+                <div>This is not a real online service! I am just trying to create a form that you wouldn't mind filling out if you wanted to support a great cause like saving the sharks.</div>
                 <div>You <em>know</em> you want to.</div>
             </div>
             <form action="" method="post">
@@ -54,11 +54,12 @@
                     <div class="form-row">
                         <div class="form-item">
                             <label for="password">PASSWORD</label>
-                            <input type="password" id="password">
+                            <input type="password" id="password" class="error">
+                            <span class="error-message"></span>
                         </div>
                         <div class="form-item">
                             <label for="password2">CONFIRM PASSWORD</label>
-                            <input type="password" id="password2">
+                            <input type="password" id="password2" class="error">
                         </div>
                     </div>
                 </fieldset>
@@ -69,3 +70,31 @@
     </div>
 </body>
 </html>
+<script>
+    const passwordOne = document.getElementById("password");
+    const passwordTwo = document.getElementById("password2");
+    const errorMessage = document.querySelector('span.error-message');
+
+    passwordOne.addEventListener('input', function () {
+        if(passwordOne.value !== passwordTwo.value) {
+            errorMessage.textContent = "* Passwords must match";
+            passwordOne.setCustomValidity("* Passwords must match");
+            passwordTwo.setCustomValidity("* Passwords must match");
+        } else {
+            errorMessage.textContent = "";
+            passwordOne.setCustomValidity("");
+            passwordTwo.setCustomValidity("");
+        }
+    });
+    passwordTwo.addEventListener('input', function () {
+        if(passwordOne.value !== passwordTwo.value) {
+            errorMessage.textContent = "* Passwords must match";
+            passwordOne.setCustomValidity("* Passwords must match");
+            passwordTwo.setCustomValidity("* Passwords must match");
+        } else {
+            errorMessage.textContent = "";
+            passwordOne.setCustomValidity("");
+            passwordTwo.setCustomValidity("");
+        }
+    });
+</script>
